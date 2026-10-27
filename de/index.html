@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Optimierung Versorgungsstrukturen | Pädiatrische Onkologie München</title>
+  <meta name="description" content="Factsheet zur Optimierung der pädiatrischen Onkologie und Hämatologie im Großraum München und Oberbayern.">
+  <style>
+    :root {
+      --blue: #005a9c;
+      --blue-dark: #12395a;
+      --blue-deep: #0b2e4a;
+      --cyan: #2b9fc5;
+      --green: #4b9d66;
+      --red: #c94444;
+      --text: #172033;
+      --muted: #5f6e80;
+      --line: #d9e3ec;
+      --soft: #f4f8fb;
+      --soft-blue: #eaf4fb;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--white);
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.55;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 12px 24px 14px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .brand-cluster {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .brand {
+      display: grid;
+      gap: 1px;
+      color: var(--blue);
+      text-decoration: none;
+      line-height: 1.04;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .brand-kicker,
+    .brand-subline {
+      font-size: clamp(16px, 1.8vw, 27px);
+      font-weight: 500;
+    }
+
+    .brand-main {
+      font-size: clamp(21px, 2.35vw, 31px);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .header-logos {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: transparent;
+    }
+
+    .header-logo {
+      width: auto;
+      max-width: 178px;
+      max-height: 68px;
+      object-fit: contain;
+    }
+
+    .header-logo--ikkm {
+      max-width: 154px;
+      max-height: 70px;
+    }
+
+    nav {
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid rgba(217, 227, 236, 0.8);
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    nav a:hover {
+      color: var(--blue);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding: 76px 24px;
+    }
+
+    .inner {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 82vh;
+      display: grid;
+      align-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(125deg, #0b2e4a 0%, #005a9c 58%, #2b9fc5 100%);
+      background-size: 42px 42px, 42px 42px, auto;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 640px) minmax(340px, 520px);
+      gap: clamp(36px, 6vw, 76px);
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-copy {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin-bottom: 22px;
+      color: var(--blue-dark);
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.08;
+      letter-spacing: 0;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .hero-title-main,
+    .hero-title-sub {
+      display: block;
+    }
+
+    .hero-title-main {
+      text-transform: uppercase;
+      font-size: clamp(34px, 4.2vw, 54px);
+    }
+
+    .hero-title-sub {
+      margin-top: 12px;
+      font-size: clamp(24px, 2.7vw, 38px);
+      font-weight: 600;
+      line-height: 1.16;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin-bottom: 28px;
+      color: #33465c;
+      font-size: clamp(18px, 2vw, 23px);
+    }
+
+    .hero .eyebrow,
+    .hero h1,
+    .hero .lead {
+      color: var(--white);
+    }
+
+    .hero .eyebrow {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero .lead {
+      max-width: 780px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-summary {
+      max-width: 620px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(17px, 1.65vw, 21px);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--blue);
+      border-radius: 6px;
+      color: var(--blue);
+      background: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      overflow-wrap: anywhere;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button.primary {
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    .mail-display {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      border-radius: 6px;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.12);
+      font-weight: 800;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+      user-select: text;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(18, 57, 90, 0.16);
+    }
+
+    .hero .button {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero .button.primary {
+      color: var(--blue-deep);
+      border-color: var(--white);
+      background: var(--white);
+    }
+
+    .hero-panel {
+      width: 100%;
+      max-width: 520px;
+      padding: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 28px 70px rgba(3, 20, 34, 0.28);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-panel h2 {
+      margin-bottom: 16px;
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .check-list li::before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      border: 2px solid var(--green);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: inset 0 0 0 5px var(--green);
+    }
+
+    .media-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: 0 24px 60px rgba(18, 57, 90, 0.14);
+    }
+
+    .media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: 12px 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .map-frame {
+      box-shadow: 0 18px 45px rgba(18, 57, 90, 0.12);
+    }
+
+    .map-frame img {
+      padding: 14px;
+      background: #f8fafc;
+      object-fit: contain;
+    }
+
+    .section-head {
+      max-width: 790px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin-bottom: 14px;
+      color: var(--blue-dark);
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .soft {
+      background: var(--soft);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 210px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--blue);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--blue-dark);
+      font-size: 22px;
+      line-height: 1.22;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 42px;
+      align-items: start;
+    }
+
+    .text-block {
+      display: grid;
+      gap: 17px;
+      color: #36475c;
+      font-size: 18px;
+    }
+
+    .fact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .fact {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .fact span {
+      display: block;
+      color: var(--blue);
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .fact p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      margin: 30px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+
+    .split .stat-strip {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+      padding: 22px;
+      background: var(--white);
+    }
+
+    .stat b {
+      display: block;
+      color: var(--blue);
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      font-size: 15px;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .data-table th {
+      color: var(--blue-dark);
+      background: var(--soft-blue);
+      font-weight: 800;
+    }
+
+    .data-table tr:last-child th,
+    .data-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .data-table td:last-child {
+      font-weight: 800;
+      color: var(--blue-dark);
+    }
+
+    .data-note {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .image-grid .media-frame img {
+      aspect-ratio: 1.12;
+      object-fit: contain;
+      background: #f8fafc;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      counter-reset: step;
+    }
+
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 46px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .step::before {
+      content: counter(step);
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--blue);
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin-bottom: 4px;
+      color: var(--blue-dark);
+      font-size: 20px;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .quote {
+      padding: 30px;
+      border-radius: 8px;
+      color: var(--white);
+      background: var(--blue-dark);
+      font-size: 25px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .opportunity {
+      background: var(--white);
+    }
+
+    .opportunity .section-head {
+      max-width: 920px;
+      margin-bottom: 24px;
+    }
+
+    .opportunity h2 {
+      text-transform: uppercase;
+    }
+
+    .opportunity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .opportunity-box {
+      min-height: 220px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .opportunity-box--center {
+      min-height: auto;
+      margin: 0;
+    }
+
+    .opportunity-box--center p + p {
+      margin-top: 10px;
+    }
+
+    .opportunity-box h3 {
+      margin-bottom: 12px;
+      color: var(--blue-dark);
+      font-size: 21px;
+      line-height: 1.22;
+    }
+
+    .opportunity-box p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .reference {
+      background: var(--blue-dark);
+      color: var(--white);
+    }
+
+    .reference .eyebrow,
+    .reference h2 {
+      color: var(--white);
+    }
+
+    .reference .section-head p,
+    .reference .text-block {
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .reference-card {
+      padding: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .reference-card h3 {
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .reference-list {
+      display: grid;
+      gap: 13px;
+      list-style: none;
+    }
+
+    .reference-list li {
+      padding-left: 18px;
+      border-left: 3px solid var(--cyan);
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .roadmap-item {
+      position: relative;
+      min-height: 180px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .roadmap-item span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 16px;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--green);
+      font-weight: 800;
+    }
+
+    .roadmap-item h3 {
+      color: var(--blue-dark);
+      font-size: 19px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .roadmap-item p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .download-section {
+      background: var(--white);
+    }
+
+    .download-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: center;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--soft);
+    }
+
+    .download-card h3 {
+      margin-bottom: 8px;
+      color: var(--blue-dark);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .download-card p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cta {
+      color: var(--white);
+      background: var(--blue);
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 820px;
+      margin: 0 auto 18px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .cta p {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 18px;
+    }
+
+    .cta .button {
+      color: var(--blue);
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+    .cta .mail-display {
+      color: var(--blue);
+      background: var(--white);
+      border-color: var(--white);
+    }
+
+    footer {
+      padding: 42px 24px 26px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--white);
+    }
+
+    .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .footer-logos {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(22px, 5vw, 52px);
+      flex-wrap: wrap;
+      border-radius: 8px;
+      background: transparent;
+    }
+
+    .footer-logo {
+      width: auto;
+      max-width: min(230px, 42vw);
+      max-height: 94px;
+      object-fit: contain;
+    }
+
+    .footer-logo--ikkm {
+      max-width: min(230px, 46vw);
+      max-height: 112px;
+    }
+
+    .footer-inner a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 940px) {
+      .brand-main {
+        white-space: normal;
+      }
+
+      .split,
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      section {
+        padding: 58px 20px;
+      }
+
+      .cards,
+      .fact-grid,
+      .opportunity-grid,
+      .download-card,
+      .roadmap,
+      .stat-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .cards,
+      .fact-grid,
+      .opportunity-grid,
+      .download-card,
+      .roadmap,
+      .stat-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .download-card .button {
+        width: 100%;
+      }
+
+      .step {
+        grid-template-columns: 38px 1fr;
+      }
+
+      .quote {
+        font-size: 22px;
+      }
+
+      .brand-main {
+        font-size: 20px;
+      }
+
+      .brand-cluster {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .header-logos {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .header-logo {
+        max-width: 46%;
+        max-height: 64px;
+      }
+
+      .header-logo--ikkm {
+        max-height: 64px;
+      }
+
+      .footer-logo {
+        max-width: 74vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand-cluster">
+        <a class="brand" href="#" aria-label="Optimierung Versorgungsstrukturen pädiatrische Onkologie München">
+          <span class="brand-kicker">Allianz für</span>
+          <span class="brand-main">Kindergesundheit - Krebs bei Kindern</span>
+          <span class="brand-subline">Gemeinsam Kräfte bündeln</span>
+        </a>
+        <div class="header-logos" aria-label="Partnerlogos">
+          <img class="header-logo header-logo--ikkm" src="../assets/factsheet/IKKM_Logo.png" alt="IKKM">
+          <img class="header-logo" src="../assets/factsheet/Ebersberg_Logo.avif" alt="Ebersberg">
+        </div>
+      </div>
+      <nav aria-label="Hauptnavigation">
+        <a href="#ausgangslage">Ausgangslage</a>
+        <a href="#prinses-maxima">Prinses Máxima</a>
+        <a href="#region">Region</a>
+        <a href="#daten">Daten</a>
+        <a href="#loesungen">Lösungsansätze</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#material">Material</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="inner hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Allianz für Kindergesundheit</p>
+          <h1>
+            <span class="hero-title-main">Spitzenmedizin in der Kinderonkologie für München / Südbayern</span>
+            <span class="hero-title-sub">Optimierung der Versorgungs&shy;strukturen</span>
+          </h1>
+          <p class="hero-summary">
+            In München gibt es in unmittelbarer Nähe zwei kinderonkologische Behandlungszentren. Was spricht für eine Bündelung? Eine ganze Reihe von Argumenten zeigt, dass ein Versorgungszentrum der Spitzenmedizin gravierende Vorteile bieten würde.
+          </p>
+          <div class="actions">
+            <span class="mail-display">kontakt@allianz-kindergesundheit-muenchen.de</span>
+            <a class="button" href="#ausgangslage">Mehr erfahren</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <h2>Was spricht für eine Bündelung?</h2>
+          <ul class="check-list">
+            <li>Seltene Erkrankungen brauchen Routine, Spezialisierung und stabile Teams.</li>
+            <li>Diagnostik, Therapie, Forschung und Nachsorge werden zunehmend komplexer.</li>
+            <li>Größere Einheiten sind für Expert:innen in Versorgung und Forschung attraktiver.</li>
+            <li>Wohnortnahe ambulante Strukturen können gezielt mitgedacht werden.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ausgangslage">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Ausgangslage</p>
+          <h2>Zwei universitäre Standorte auf engem Raum bei steigenden Anforderungen an Qualität und Spezialisierung.</h2>
+          <p>
+            In München bestehen mit dem Haunerschen Kinderspital der LMU und der Kinderklinik München Schwabing der München Klinik / TUM zwei Standorte für pädiatrische Onkologie und Hämatologie. Es stellt sich die Frage, welche Struktur künftig medizinisch, personell und baulich am tragfähigsten ist.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <strong>Struktur</strong>
+            <h3>Komplexe Versorgung verteilt sich auf mehrere Einheiten.</h3>
+            <p>Diagnostik, stationäre Therapie, Tagesklinik, Nachsorge und Forschung sind inhaltlich eng verknüpft, werden aber in parallelen Strukturen vorgehalten.</p>
+          </article>
+          <article class="card">
+            <strong>Qualität</strong>
+            <h3>Erfahrung entsteht durch Fallzahl, Routine und Teamstabilität.</h3>
+            <p>Aus anderen Bereichen der Medizin ist der Zusammenhang zwischen hoher Fallzahl, Komplikationsmanagement und Ergebnisqualität gut belegt.</p>
+          </article>
+          <article class="card">
+            <strong>Zukunft</strong>
+            <h3>Fachkräftemangel und Wissenszuwachs erhöhen den Druck.</h3>
+            <p>Translationale Medizin, molekulare Diagnostik, Studienzugang und Langzeitnachsorge brauchen attraktive Strukturen für Expertinnen und Experten.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prinses-maxima" class="reference">
+      <div class="inner split">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Best Practice Niederlande</p>
+            <h2>Bündelung als Qualitätsstrategie, nicht als Selbstzweck.</h2>
+            <p>
+              Das Prinses Máxima Centrum in Utrecht gilt als international beachtetes Modell für die pädiatrische Onkologie. Es bündelt die Behandlung krebskranker Kinder in den Niederlanden an einem nationalen Zentrum und koppelt diese Struktur eng mit Forschung, Diagnostik, Studien und Nachsorge.
+            </p>
+          </div>
+          <div class="text-block">
+            <p>
+              Entscheidend ist das Prinzip: seltene und komplexe Krankheitsbilder brauchen Erfahrung, Spezialisierung und schnell verfügbare interdisziplinäre Entscheidungen. Gleichzeitig müssen Familien nicht für jede Routineleistung maximal weit fahren.
+            </p>
+            <p>
+              Für München entsteht daraus eine konkrete Leitfrage: Welche Elemente lassen sich übertragen, damit hohe Expertise zentral verfügbar ist und wohnortnahe Versorgung dort erhalten bleibt, wo sie medizinisch sinnvoll ist?
+            </p>
+          </div>
+        </div>
+        <aside class="reference-card">
+          <h3>Übertragbare Bausteine für München</h3>
+          <ul class="reference-list">
+            <li>frühe molekulare Diagnostik und strukturierter Studieneinschluss</li>
+            <li>Konzentration hochkomplexer Therapien und seltener Entitäten</li>
+            <li>systematische Supportivmedizin, Psychoonkologie und Langzeitnachsorge</li>
+            <li>Ambulanz- und Nachsorgenetz für Routinekontakte und Familiennähe</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="region" class="soft">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Einzugsgebiet</p>
+          <h2>Die Erreichbarkeit spricht nicht gegen eine Bündelung in einem Zentrum der Spitzenversorgung.</h2>
+          <p>
+            Die vorläufige Analyse im Factsheet zeigt: Eine strukturelle Bündelung in München würde die lokale und regionale Erreichbarkeit voraussichtlich nicht wesentlich verändern, weil die beiden Kliniken das gleiche Einzugsgebiet abdecken und gemeinsam leichter ambulante Versorgungsstrukturen in der Region aufbauen könnten.
+          </p>
+        </div>
+
+        <div class="image-grid">
+          <figure class="media-frame map-frame">
+            <img src="../assets/factsheet/image1.png" alt="Karte der Münchner Klinikstandorte und beteiligten Initiativen">
+            <figcaption class="caption">Münchner Klinikstandorte, Patienteninitiativen und Elternvereine aus dem Factsheet.</figcaption>
+          </figure>
+          <figure class="media-frame map-frame">
+            <img src="../assets/factsheet/image3.png" alt="Karte bayerischer und angrenzender Versorgungsgebiete">
+            <figcaption class="caption">Bayerische und angrenzende Versorgungsgebiete im Überblick.</figcaption>
+          </figure>
+          <figure class="media-frame map-frame">
+            <img src="../assets/factsheet/image4.png" alt="Fahrtzeitzonen im Umfeld der Münchner Klinikstandorte">
+            <figcaption class="caption">Fahrtzeitzonen rund um die Münchner Standorte.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="daten">
+      <div class="inner split">
+        <div>
+          <div class="section-head">
+            <p class="eyebrow">Seltene Erkrankungen mit breitem Spektrum</p>
+            <h2>Bei seltenen Diagnosen zählt jede zusätzliche Erfahrung im Team.</h2>
+            <p>
+              Das Deutsche Kinderkrebsregister weist für Bayern 338 gemeldete Neuerkrankungen p.a. aus. Bei sieben Kinderonkologischen Zentren in Bayern ergibt das im Durchschnitt eine Anzahl von 48 Neuerkrankungen pro Klinik und Jahr.
+            </p>
+            <p>
+              Die Möglichkeiten in der kinderonkologischen Diagnostik und Therapie werden immer besser, aber damit auch zunehmend komplexer und differenzierter. Das erfordert Spezialisierung bzw. Subspezialisierung innerhalb der Behandlungsteams.
+            </p>
+          </div>
+          <div class="fact-grid">
+            <div class="fact">
+              <span>338</span>
+              <p>gemeldete Neuerkrankungen p.a.</p>
+            </div>
+            <div class="fact">
+              <span>7</span>
+              <p>bayerische Kinderonkologische Zentren</p>
+            </div>
+            <div class="fact">
+              <span>48</span>
+              <p>durchschnittliche Anzahl Neuerkrankungen pro Klinik und Jahr</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <table class="data-table" aria-label="Diagnosegruppen und rechnerische Fälle pro Klinik in Bayern">
+            <thead>
+              <tr>
+                <th>Diagnosegruppe</th>
+                <th>Anteil</th>
+                <th>Fälle pro Klinik</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Leukämien</th>
+                <td>29,7%</td>
+                <td>14,3</td>
+              </tr>
+              <tr>
+                <th>ZNS-Tumoren</th>
+                <td>23,6%</td>
+                <td>11,4</td>
+              </tr>
+              <tr>
+                <th>Lymphome</th>
+                <td>15,3%</td>
+                <td>7,4</td>
+              </tr>
+              <tr>
+                <th>Weichteilsarkome</th>
+                <td>5,7%</td>
+                <td>2,8</td>
+              </tr>
+              <tr>
+                <th>Periphere Nervenzelltumoren</th>
+                <td>5,5%</td>
+                <td>2,7</td>
+              </tr>
+              <tr>
+                <th>Nierentumoren</th>
+                <td>5,6%</td>
+                <td>2,7</td>
+              </tr>
+              <tr>
+                <th>Knochentumoren</th>
+                <td>4,5%</td>
+                <td>2,2</td>
+              </tr>
+              <tr>
+                <th>Keimzelltumoren</th>
+                <td>3,5%</td>
+                <td>1,7</td>
+              </tr>
+              <tr>
+                <th>Retinoblastome</th>
+                <td>2,9%</td>
+                <td>1,4</td>
+              </tr>
+              <tr>
+                <th>Lebertumoren</th>
+                <td>1,4%</td>
+                <td>0,7</td>
+              </tr>
+              <tr>
+                <th>Sonstige maligne Erkrankungen</th>
+                <td>2,3%</td>
+                <td>1,1</td>
+              </tr>
+              <tr>
+                <th>Alle Erkrankungen</th>
+                <td>100,0%</td>
+                <td>48,3</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="data-note">Anteile und Fälle pro Klinik gerundet; rechnerische Ableitung aus 338 Neuerkrankungen p.a. und sieben Zentren.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft">
+      <div class="inner split">
+        <div>
+          <div class="quote">
+            In der Erwachsenenmedizin sind Mindestmengen in der Onkologie anerkannter Standard.
+          </div>
+          <div class="stat-strip">
+            <div class="stat">
+              <b>40</b>
+              <span>allogene Stammzelltransplantationen bei Erwachsenen ab 2025 als Orientierungspunkt</span>
+            </div>
+            <div class="stat">
+              <b>20</b>
+              <span>komplexe Eingriffe am Organsystem Bauchspeicheldrüse bei Erwachsenen als Orientierungspunkt</span>
+            </div>
+            <div class="stat">
+              <b>75</b>
+              <span>thoraxchirurgische Lungenkrebsbehandlungen bei Erwachsenen ab 2025</span>
+            </div>
+            <div class="stat">
+              <b>100</b>
+              <span>chirurgische Brustkrebsbehandlungen bei Erwachsenen ab 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="text-block">
+          <p class="eyebrow">Qualitätsvorgaben</p>
+          <h2>Mindestmengen in der Erwachsenenmedizin sind nicht 1:1 auf die Pädiatrie übertragbar, aber geben einen deutlichen Denkanstoß.</h2>
+          <p>
+            In der Erwachsenenmedizin sind Mindestmengen in der Onkologie anerkannter Standard. Relevant sind unter anderem Vorgaben zu allogenen Stammzelltransplantationen, thoraxchirurgischen Lungenkrebsbehandlungen, chirurgischen Brustkrebsbehandlungen und komplexen Eingriffen am Organsystem Bauchspeicheldrüse.
+          </p>
+          <p>
+            GPOH und G-BA definieren Struktur- und Qualitätsanforderungen, die sich weiterentwickeln werden. Eine Bündelung komplexer Versorgungsaufgaben kann helfen, Standards langfristig zu erfüllen und Doppelstrukturen zu reduzieren.
+          </p>
+          <p>
+            Das Prinses Máxima Centrum in Utrecht dient als internationales Referenzmodell: komplexe und kurative Behandlungen werden zentral gebündelt, während wohnortnahe Ambulanzen unterstützende Versorgung, Nachsorge und Routinekontakte übernehmen.
+          </p>
+          <p>
+            Für München bedeutet das nicht, ein ausländisches Modell direkt zu kopieren. Relevant sind übertragbare Bausteine: koordinierte Patientenwege, molekulare Diagnostik, Studieneinschluss und strukturierte Langzeitnachsorge.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="opportunity">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Zukunftschancen durch medizinischen Fortschritt</p>
+          <h2>Neue Therapieoptionen für alle Kinder &amp; Jugendlichen erschließen</h2>
+        </div>
+        <div class="opportunity-grid">
+          <article class="opportunity-box">
+            <h3>Neue Verfahren sind mit hohen Kosten verbunden.</h3>
+            <p>
+              Neue Verfahren in Diagnostik und Therapie in der Kinderonkologie sind sehr vielversprechend, aber auch mit extrem hohen Kosten verbunden.
+            </p>
+          </article>
+          <article class="opportunity-box opportunity-box--center">
+            <h3>Ressourcen müssen dort ankommen, wo sie gebraucht werden.</h3>
+            <p>
+              Niemand möchte, dass medizinische Entscheidungen von finanziellen Überlegungen bestimmt werden.
+            </p>
+            <p>
+              Gleichzeitig wissen alle Beteiligten, dass Ressourcen im Gesundheitswesen nicht unbegrenzt verfügbar sind. Umso wichtiger ist es, vorhandene Mittel möglichst wirksam einzusetzen.
+            </p>
+          </article>
+          <article class="opportunity-box">
+            <h3>Versorgungsstrukturen effizient und effektiv gestalten.</h3>
+            <p>
+              Zukunftsgerichtete und leistungsfähige Versorgungsstrukturen tragen dazu bei, dass die verfügbaren Ressourcen dort ankommen, wo sie den größten Nutzen für die betroffenen Kinder, Jugendlichen und ihre Familien entfalten - in der Behandlung und Begleitung sowie in der Erforschung und Weiterentwicklung neuer Therapien.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="loesungen">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Potentielle Lösungsansätze</p>
+          <h2>Strukturvarianten und -elemente, die fachlich und politisch diskutiert werden sollten.</h2>
+          <p>
+            Die Optionen unterscheiden sich darin, wie stark Behandlung, Expertise und Infrastruktur gebündelt werden. Entscheidend ist, komplexe Therapie zentral zu stärken und zugleich Familien bei Routineversorgung wohnortnah zu versorgen.
+          </p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div>
+              <h3>Bündelung einzelner Fallgruppen</h3>
+              <p>Seltene Diagnosen oder besonders komplexe Therapien wie Hochrisiko-Leukämien, ZNS-Tumoren, seltene solide Tumoren oder Stammzelltransplantationen werden einem Schwerpunktstandort zugeordnet.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>Konzentration der gesamten pOH-Versorgung</h3>
+              <p>Komplexe Diagnostik, Systemtherapien, Tumorkonferenzen, Studien, Forschung und Lehre werden für die Region an einem Zentrum zusammengeführt.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>Zentrum plus dezentrale Shared-Care-Standorte</h3>
+              <p>Kurative und komplexe Behandlung erfolgt zentral; Blutabnahmen, Supportive Care, Verlaufskontrollen, Psychoonkologie und Nachsorge können über gekoppelte Ambulanzen wohnortnah bleiben.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div>
+              <h3>Digitale und telemedizinische Ergänzung</h3>
+              <p>Videosprechstunden, digital gestützte Nachsorgepläne und gemeinsame Patientenakten reduzieren unnötige Wege und sichern die Rückkopplung an das Zentrum.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="soft">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Analyse-, Entscheidungs- und Transformationsprozess</p>
+          <h2>Der nächste Schritt ist ein strukturierter Dialog auf einer belastbaren Datengrundlage und mit klugen Strukturoptionen.</h2>
+          <p>
+            Für eine Bewertung von Optimierungsoptionen ist eine Aufbereitung von Grundlagen, wie Fallzahlen, Einzugsgebiete, Fahrtzeitzonen, Versorgungskapazitäten, absehbare Entwicklungen in Diagnostik und Therapie in einem Strukturgutachten wertvoll. Hilfreich ist ein Blick auf Best-Practice-Gestaltungen wie z.B. in Holland.
+          </p>
+        </div>
+
+        <div class="roadmap">
+          <article class="roadmap-item">
+            <span>1</span>
+            <h3>Datenbasis schärfen</h3>
+            <p>Fallzahlen stationär und ambulant, Verweildauern, Behandlungskapazitäten Normal- und Intensivstation, Tagesklinik sowie Expert:innen mit Spezialisierungen und Subspezialisierungen erfassen.</p>
+          </article>
+          <article class="roadmap-item">
+            <span>2</span>
+            <h3>Elterninitiativen einbeziehen</h3>
+            <p>Eltern- und Patienteninitiativen einbeziehen: Einzugsgebiete, Fahrtzeitzonen sowie Akut-Phase gegenüber Kontroll- und Nachsorge-Terminen systematisch aufnehmen.</p>
+          </article>
+          <article class="roadmap-item">
+            <span>3</span>
+            <h3>Fachlichen Konsens suchen</h3>
+            <p>Expertinnen, Pflege, Forschung, Beratungsstellen, KioNet und CCC-M in gemeinsame Dialogformate bringen.</p>
+          </article>
+          <article class="roadmap-item">
+            <span>4</span>
+            <h3>Trägerentscheidung vorbereiten</h3>
+            <p>Ministerien, Stadt München, Kliniken und Kostenträger mit Szenarien, Meilensteinen und Transformationspfad befassen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="material" class="download-section">
+      <div class="inner">
+        <div class="section-head">
+          <p class="eyebrow">Material</p>
+          <h2>Weiterführende Slides und Vortrag</h2>
+          <p>
+            Die Präsentation aus unserer Veranstaltungsreihe zusammen mit Health Care Bayern e.V. steht hier als PDF zum Download bereit.
+          </p>
+        </div>
+        <div class="download-card">
+          <div>
+            <h3>Slides zur Veranstaltungsreihe</h3>
+            <p>PDF-Präsentation mit weiterführenden Informationen zur Diskussion über Versorgungsstrukturen in der pädiatrischen Onkologie.</p>
+          </div>
+          <a class="button primary" href="../ppt.pdf" download>PDF herunterladen</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="cta">
+      <div class="inner">
+        <h2>Von der Diskussion zur entscheidungsfähigen Zielstruktur.</h2>
+        <p>
+          Diese Website verdichtet die wichtigsten Aspekte und soll einen Beitrag zu einer sachlichen Diskussion zwischen den Beteiligten leisten: Ministerien, Kliniken, Leistungsträger:innen, Eltern- und Patienten-Initiativen.
+        </p>
+        <span class="mail-display">kontakt@allianz-kindergesundheit-muenchen.de</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logos" aria-label="Partnerlogos">
+      <img class="footer-logo footer-logo--ikkm" src="../assets/factsheet/IKKM_Logo.png" alt="IKKM">
+      <img class="footer-logo" src="../assets/factsheet/Ebersberg_Logo.avif" alt="Ebersberg">
+    </div>
+    <div class="footer-inner">
+      <span>© 2026 Allianz Kindergesundheit München</span>
+      <span>
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
